@@ -1,3 +1,17 @@
-<p>
-  project-form works!
-</p>
+<div class="card my-5">
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit()" #projectForm="ngForm">
+        <div class="form-group">
+          <label for="name">Project Name</label>
+          <input type="text" [(ngModel)]="project.name" class="form-control" id="name" name="name" placeholder="Enter Project Name"
+            required #name="ngModel">
+        </div>
+        <div class="form-group">
+          <label for="description">Project Description</label>
+          <input type="text" [(ngModel)]="project.description" class="form-control" id="description" name="description" placeholder="Enter Project Description"
+            required #name="ngModel">
+        </div>
+        <button type="submit" [disabled]="!projectForm.form.valid" class="btn btn-info">Submit</button>
+      </form>
+    </div>
+  </div>

@@ -1,3 +1,32 @@
-<p>
-  todo-form works!
-</p>
+<div class="card my-5">
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()" #toDoForm="ngForm">
+      <div class="form-group">
+        <label for="name">To Do Name</label>
+        <input type="text" [(ngModel)]="todo.name" class="form-control" id="name"
+        name="name" placeholder="Enter Todo name" required #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="description">To Do Description</label>
+        <input type="text" [(ngModel)]="todo.description" class="form-control" id="description"
+        name="description" placeholder="Enter Todo Description" required #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="userId">To Do User &nbsp;</label>
+          <select name="userId"  [(ngModel)]="todo.userId">
+            <option [label] ="userId" *ngFor="let user of users" [selected]="selected" 
+            value="{{ user.id }}">{{user.firstName}} {{user.lastName}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="userId">To Do Project &nbsp;</label>
+             <select name="projectId"  [(ngModel)]="todo.projectId">
+                <option [label] ="projectId" *ngFor="let project of projects" 
+                [selected]="selected" value="{{ project.id }}">{{project.name}}</option>
+            </select>
+        </div>
+        <button type="submit" [disabled]="!toDoForm.form.valid" class="btn btn-info">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
