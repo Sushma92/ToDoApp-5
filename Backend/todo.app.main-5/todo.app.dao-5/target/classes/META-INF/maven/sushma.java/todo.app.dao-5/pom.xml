@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>sushma.java</groupId>
+		<artifactId>todo.app.main-5</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>sushma.java</groupId>
+	<artifactId>todo.app.dao-5</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>todo.app.dao-5</name>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>sushma.java</groupId>
+			<artifactId>todo.app.common-5</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>${spring.boot.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</project>
