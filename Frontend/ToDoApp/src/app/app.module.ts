@@ -7,6 +7,11 @@ import { UserComponent } from './common/entity/user/user.component';
 import { MainComponent } from './common/layout/main/main.component';
 import { HeaderComponent } from './common/layout/header/header.component';
 import { FooterComponent } from './common/layout/footer/footer.component';
+import { UserFormComponent } from './user-form/user-form/user-form.component';
+import { TodoComponent } from './todo/todo/todo.component';
+import { TodoFormComponent } from './todo-form/todo-form/todo-form.component';
+import { ProjectComponent } from './project/project/project.component';
+import { ProjectFormComponent } from './project-form/project-form/project-form.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +19,12 @@ import { FooterComponent } from './common/layout/footer/footer.component';
     UserComponent,
     MainComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    UserFormComponent,
+    TodoComponent,
+    TodoFormComponent,
+    ProjectComponent,
+    ProjectFormComponent
   ],
   imports: [
     BrowserModule,
